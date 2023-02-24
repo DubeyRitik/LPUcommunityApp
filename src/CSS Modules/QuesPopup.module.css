@@ -7,7 +7,15 @@
   top: 0;
   left: 0;
 }
-
+.closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 .actualForm {
   background-color: aquamarine;
   padding: 40px;
