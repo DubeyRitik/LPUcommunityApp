@@ -92,13 +92,27 @@ export default function Home() {
       <div className={styles.homeParent}>
         <div className={styles.container}>
           <div className={styles.dummy}>
-          <button onClick={showHomeDiv}>Home</button>
-          <button onClick={showEventsDiv}>Events</button>
-          <button onClick={showQnADiv}>Question & Answer</button>
-          <button onClick={showStudyMaterialDiv}>Study Materials</button>
-          <button onClick={showClubsDiv}>Clubs</button>
-          <button onClick={showCompetitionsDiv}>Competitions</button>
-          <button onClick={showMessDiv}>Mess</button>
+            <button onClick={showHomeDiv} className={styles.btn}>
+              Home
+            </button>
+            <button onClick={showEventsDiv} className={styles.btn}>
+              Events
+            </button>
+            <button onClick={showQnADiv} className={styles.btn}>
+              Question & Answer
+            </button>
+            <button onClick={showStudyMaterialDiv} className={styles.btn}>
+              Study Materials
+            </button>
+            <button onClick={showClubsDiv} className={styles.btn}>
+              Clubs
+            </button>
+            <button onClick={showCompetitionsDiv} className={styles.btn}>
+              Competitions
+            </button>
+            <button onClick={showMessDiv} className={styles.btn}>
+              Mess
+            </button>
           </div>
         </div>
         <div>
