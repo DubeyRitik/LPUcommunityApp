@@ -19,14 +19,18 @@ function QuestionDiv() {
   }, []);
 
   return (
-    <div className={styles.quesDiv}>
-      {questions.map((question) => (
-        <Question
-          question={question.ques}
-          answer={question.answer}
-          key={question.id}
-        />
-      ))}
+    <div className={styles.homeParent}>
+      <div className={styles.categories}>Categories</div>
+
+      <div className={styles.quesDiv}>
+        {questions.map((question) => (
+          <Question
+            question={question.ques}
+            answer={question.answer}
+            key={question.id}
+          />
+        ))}
+      </div>
     </div>
   );
 }

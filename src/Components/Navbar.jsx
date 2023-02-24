@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import styles from "../CSS Modules/Navbar.module.css";
 import logo from "../Images/logo.png";
 import AnswerQuesDiv from "./AnswerQuesDiv";
+import Home from "./Home";
 import QuesPopup from "./QuesPopup";
 import QuestionDiv from "./QuestionDiv";
-
 
 function Navbar() {
   const [askQues, setaskQues] = useState(false);
@@ -33,17 +33,12 @@ function Navbar() {
           <span className={styles.brand}>LPU Community - Ask Anything</span>
         </div>
         <div className={styles.navRight}>
-          {/* <button onClick={showHomeDiv}>Home</button> */}
-          {/* <button onClick={askQuesDiv}>Ask Question</button> */}
-          {/* <button onClick={ansQuesDiv}>Answer Question</button> */}
           <button>Profile</button>
           <button>Logout</button>
           {askQues && <QuesPopup submit={askQuesDiv}></QuesPopup>}
         </div>
       </nav>
-
-      {/* {showHome && <QuestionDiv></QuestionDiv>} */}
-      {/* {ansQues && <AnswerQuesDiv></AnswerQuesDiv>} */}
+      <Home></Home>
     </>
   );
 }
