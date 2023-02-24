@@ -1,10 +1,21 @@
 .quesDiv {
   width: 50%;
-  
-  background-color: #FFFFFF;
+
+  background-color: #ffffff;
   margin: auto;
   margin-top: 10px;
   padding: 10px;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 6px 10px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2), 0px 1px 18px rgba(0, 0, 0, 0.12),
+    0px 6px 10px rgba(0, 0, 0, 0.14);
   border-radius: 4px;
+}
+
+.homeParent {
+  background-color: aqua;
+  display: grid;
+  grid-template-columns: 1fr 30fr;
+}
+
+.categories {
+  background-color: rgb(98, 192, 61);
 }
