@@ -1,0 +1,47 @@
+.wrapper {
+  background-color: rgba(176, 47, 47, 0.408);
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.actualForm {
+  background-color: aquamarine;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px #ddd;
+  position: absolute;
+  top: 20%;
+  margin-left: 20%;
+}
+
+.actualForm label {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.actualForm input[type="text"] {
+  padding: 20px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.actualForm button {
+  padding: 20px 40px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 40px;
+}
