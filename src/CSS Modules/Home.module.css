@@ -29,11 +29,11 @@
   border: none;
   background-color: #ffffff;
 }
-button:hover {
+.btn:hover {
   color: #3b5998;
   background-image: linear-gradient(to right, rgba(255,0,0,0),#3b5998);
 }
-button:active {
+.btn:active {
   color: #3b5998;
   
 }
