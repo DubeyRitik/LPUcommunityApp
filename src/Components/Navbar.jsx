@@ -6,6 +6,8 @@ import QuesPopup from "./QuesPopup";
 import QuestionDiv from "./QuestionDiv";
 
 
+
+
 function Navbar() {
   const [askQues, setaskQues] = useState(false);
   const [showHome, setShowHome] = useState(true);
@@ -27,6 +29,7 @@ function Navbar() {
 
   return (
     <>
+    
       <nav className={styles.navbar}>
         <div className={styles.navLeft}>
           <img src={logo} alt="Ask Anything" className={styles.img} />
@@ -41,6 +44,10 @@ function Navbar() {
           {askQues && <QuesPopup submit={askQuesDiv}></QuesPopup>}
         </div>
       </nav>
+      <div>
+      </div>
+      
+      
 
       {/* {showHome && <QuestionDiv></QuestionDiv>} */}
       {/* {ansQues && <AnswerQuesDiv></AnswerQuesDiv>} */}
