@@ -6,13 +6,13 @@ import { db } from "../firebase.js";
 function QuesPopup(props) {
   const inputRef = useRef(null);
   const [showPopup, setShowPopup] = useState(true);
-
   async function addQues() {
     props.submit();
     let ques = inputRef.current.value;
     await db.collection("questions").add({ question: ques, answered: false });
     setShowPopup(false);
   }
+
 
   function closePopup() {
     setShowPopup(false);
