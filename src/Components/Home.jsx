@@ -115,7 +115,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div>
+        <div className={styles.page}>
           {showHome && <HomePage></HomePage>}
           {showQnA && <QNApage></QNApage>}
           {showEvents && <EventsPage></EventsPage>}

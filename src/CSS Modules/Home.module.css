@@ -18,6 +18,9 @@
   display: grid;
   grid-template-columns: 20% 80%;
 }
+.page{
+  margin-left: 0.4rem;
+}
 
 .btn {
   font-size: 24px;
