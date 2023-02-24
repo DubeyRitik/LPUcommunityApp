@@ -1,11 +1,14 @@
 .question {
 margin: 20px;
-background-color: aqua;
+background-color: #FFFFFF;
+box-shadow: 0px 3px 5px #9e0606, 0px 1px 18px #9e0606, 0px 6px 10px #9e0606;
+border-radius: 4px;
 }
 
 .profile {
-  display: grid;
-  grid-template-columns: 1fr 10fr;
+  display: flexbox;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .profile img {

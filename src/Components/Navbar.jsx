@@ -4,6 +4,7 @@ import logo from "../Images/logo.png";
 import AnswerQuesDiv from "./AnswerQuesDiv";
 import QuesPopup from "./QuesPopup";
 import QuestionDiv from "./QuestionDiv";
+import Sidebar from "./sidebar";
 
 function Navbar() {
   const [askQues, setaskQues] = useState(false);
