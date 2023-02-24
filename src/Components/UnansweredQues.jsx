@@ -4,6 +4,7 @@ import { db } from "../firebase";
 
 function UnansweredQues(props) {
   const [answer, setAnswer] = useState("");
+  const user = localStorage.getItem("loggedInUser");
   let ques = props.question.question;
   async function handleAnswer() {
     try {
@@ -11,6 +12,7 @@ function UnansweredQues(props) {
         ques,
         answer,
         answered: true,
+        user,
       });
       setAnswer("");
     } catch (error) {

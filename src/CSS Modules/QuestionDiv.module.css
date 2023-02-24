@@ -13,7 +13,7 @@
 .homeParent {
   background-color: aqua;
   display: grid;
-  grid-template-columns: 1fr 30fr;
+  /* grid-template-columns: 1fr 30fr; */
 }
 
 .categories {
