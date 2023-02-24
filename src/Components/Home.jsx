@@ -91,6 +91,7 @@ export default function Home() {
     <div>
       <div className={styles.homeParent}>
         <div className={styles.container}>
+          <div className={styles.dummy}>
           <button onClick={showHomeDiv}>Home</button>
           <button onClick={showEventsDiv}>Events</button>
           <button onClick={showQnADiv}>Question & Answer</button>
@@ -98,6 +99,7 @@ export default function Home() {
           <button onClick={showClubsDiv}>Clubs</button>
           <button onClick={showCompetitionsDiv}>Competitions</button>
           <button onClick={showMessDiv}>Mess</button>
+          </div>
         </div>
         <div>
           {showHome && <HomePage></HomePage>}
