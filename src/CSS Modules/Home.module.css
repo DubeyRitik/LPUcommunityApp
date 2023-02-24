@@ -1,3 +1,10 @@
-.category {
-  background-color: brown;
+.container {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.homeParent {
+  background-color: red;
+  display: grid;
+  grid-template-columns: 20% 80%;
 }
