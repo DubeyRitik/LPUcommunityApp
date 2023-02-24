@@ -1,18 +1,26 @@
 .question {
+  display: flex;
+  flex-direction: column;
 margin: 20px;
-background-color: aqua;
+background-color: #FFFFFF;
+box-shadow: 0px 1px 1px #3b5998, 0px 1px 1px #3b5998, 0px 1px 1px #3b5998;
+border-radius: 4px;
+
 }
 
 .profile {
-  display: grid;
-  grid-template-columns: 1fr 10fr;
+  display: flexbox;
+  background-color: aquamarine;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .profile img {
   width: 50px;
   height: 50px;
   border-radius: 25px;
-  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .profile h2 {
@@ -30,9 +38,11 @@ background-color: aqua;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
+  background-color: aqua;
 }
 
 .qa p {
   font-size: 18px;
   margin-bottom: 20px;
 }
+
