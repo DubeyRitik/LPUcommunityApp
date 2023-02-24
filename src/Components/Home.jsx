@@ -101,7 +101,7 @@ export default function Home() {
           <button onClick={showMessDiv}>Mess</button>
           </div>
         </div>
-        <div>
+        <div className={styles.page}>
           {showHome && <HomePage></HomePage>}
           {showQnA && <QNApage></QNApage>}
           {showEvents && <EventsPage></EventsPage>}
