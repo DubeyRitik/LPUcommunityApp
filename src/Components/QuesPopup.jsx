@@ -6,9 +6,6 @@ import { db } from "../firebase.js";
 function QuesPopup(props) {
   const inputRef = useRef(null);
   const [showPopup, setShowPopup] = useState(true);
-
-  const [showPopup, setShowPopup] = useState(true);
-
   async function addQues() {
     props.submit();
     let ques = inputRef.current.value;
@@ -16,10 +13,6 @@ function QuesPopup(props) {
     setShowPopup(false);
   }
 
-  function closePopup() {
-    setShowPopup(false);
-    setShowPopup(false);
-  }
 
   function closePopup() {
     setShowPopup(false);
