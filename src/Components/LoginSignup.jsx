@@ -52,6 +52,7 @@ export default function LoginSignup(props) {
   return (
     <div className={styles.main}>
       <div className={styles.mainLeft}>
+        <img src="https://media0.giphy.com/media/YFFGUPTPTRqIhwepA4/200w.gif?cid=6c09b952eew7c2usa1lmocvul9i9zz7sq21hi9gm7rxh29l0&rid=200w.gif&ct=g"/>
         <h1>Lpu Community</h1>
         <h2>Ask Anything</h2>
         <p>
