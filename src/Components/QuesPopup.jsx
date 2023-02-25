@@ -8,7 +8,6 @@ function QuesPopup(props) {
   const [showPopup, setShowPopup] = useState(true);
 
   async function addQues() {
-    props.submit();
     let ques = inputRef.current.value;
     await db.collection("questions").add({ question: ques, answered: false });
     setShowPopup(false);

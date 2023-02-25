@@ -30,6 +30,7 @@ function QuestionDiv() {
             key={question.id}
             user={question.user}
             likes={question.likes}
+            id={question.id}
           />
         ))}
       </div>
