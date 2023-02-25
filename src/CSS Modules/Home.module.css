@@ -31,7 +31,7 @@
 }
 .btn:hover {
   color: #3b5998;
-  background-image: linear-gradient(to right, rgba(255,0,0,0),#3b5998);
+  background: linear-gradient(to right, #a4c3b4, #09f1a0);
 }
 .btn:active {
   color: #3b5998;
