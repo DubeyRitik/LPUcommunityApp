@@ -11,7 +11,7 @@ function Carousels() {
     <Carousel style={{width:'100%'}}>
       <Carousel.Item>
         <Image
-          style={{width:'10rem',height:'25rem'}}
+          style={{width:'10rem',height:'22rem'}}
           src={img}
           className="d-block w-100"
           
@@ -25,7 +25,7 @@ function Carousels() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          style={{width:'30rem',height:'25rem'}}
+          style={{width:'30rem',height:'22rem'}}
           src={img2}
           alt="Second slide"
         />
@@ -38,7 +38,7 @@ function Carousels() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          style={{width:'30rem',height:'25rem'}}
+          style={{width:'30rem',height:'22rem'}}
           src={img1}
           alt="Third slide"
         />
