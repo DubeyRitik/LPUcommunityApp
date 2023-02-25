@@ -1,38 +1,47 @@
-import styles from '../CSS Modules/StudyMaterial.module.css'
+import styles from "../CSS Modules/Mess.module.css";
+
 export default function Mess() {
-  return <div>
-    
-    <div>
-    <h2>Mess Reviews</h2>
-  <div className={styles.cardset} >
-    
-   <div className={styles.card}>
-   <iframe src="https://www.youtube.com/embed/v-WgXYkDjBQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  <div class="card-body">
-    <h5 class="card-title">Central Mess </h5>
-    <p class="card-text">Enjoy your food</p>
-  </div>
-</div>
+  return (
+    <div className={styles.container}>
+      <div>
+        <h1 className={styles.heading}>North Mess</h1>
+        <ul className={styles.list}>
+          <li>Aaloo GObhi</li>
+          <li>Rice</li>
+          <li>Roti</li>
+          <li>Raita</li>
+          <li>Salad</li>
+          <li>Sweet</li>
+          <li>Arahar daal</li>
+        </ul>
+      </div>
 
-<div className={styles.card}>
-<iframe  src="https://www.youtube.com/embed/WQoB2z67hvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  <div class="card-body">
-    <h5 class="card-title">DSA Course</h5>
-    <p class="card-text"> DSA by Love Babbar</p>
-    <a href="https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA" class="btn btn-primary">Go to Playlist</a>
-  </div>
-</div>
+      <div>
+        <h1 className={styles.heading}>South Mess</h1>
+        <ul className={styles.list}>
+          <li>Rasam</li>
+          <li>Rice</li>
+          <li>Roti</li>
+          <li>Raita</li>
+          <li>Salad</li>
+          <li>Sweet</li>
+          <li>Mushroom</li>
+          <li>Sambhar</li>
+        </ul>
+      </div>
 
-<div className={styles.card}>
-<iframe src="https://www.youtube.com/embed/rZ41y93P2Qo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  <div class="card-body">
-    <h5 class="card-title">Java Course</h5>
-    <p class="card-text">By Kunal Kushwaha</p>
-    <a href="https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ" class="btn btn-primary">Go to Playlist</a>
-  </div>
-</div>
-  </div>;
-  </div>
-
-  </div>;
+      <div>
+        <h1 className={styles.heading}>Punjabi Mess</h1>
+        <ul className={styles.list}>
+          <li>Soyabean Sabzi</li>
+          <li>Rice</li>
+          <li>Roti</li>
+          <li>Raita</li>
+          <li>Salad</li>
+          <li>Sweet</li>
+          <li>Snacks</li>
+        </ul>
+      </div>
+    </div>
+  );
 }
