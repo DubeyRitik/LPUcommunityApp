@@ -6,6 +6,7 @@ function UnansweredQues(props) {
   const [answer, setAnswer] = useState("");
   const user = localStorage.getItem("loggedInUser");
   let ques = props.question.question;
+  let random = Math.floor(Math.random() * 1000);
   async function handleAnswer() {
     try {
       await db.collection("questions").add({
@@ -13,6 +14,8 @@ function UnansweredQues(props) {
         answer,
         answered: true,
         user,
+        id: random,
+        likes: 0,
       });
       setAnswer("");
     } catch (error) {
