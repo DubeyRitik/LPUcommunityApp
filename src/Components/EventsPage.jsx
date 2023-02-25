@@ -1,3 +1,6 @@
+import EventCard from './EventCard'
 export default function EventsPage() {
-  return <div></div>;
+  return <div>
+      <EventCard/>
+  </div>;
 }
