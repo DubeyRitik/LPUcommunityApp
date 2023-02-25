@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import styles from "../CSS Modules/Navbar.module.css";
 import logo from "../Images/logo.png";
 import AnswerQuesDiv from "./AnswerQuesDiv";
+import Home from "./Home";
 import QuesPopup from "./QuesPopup";
 import QuestionDiv from "./QuestionDiv";
 
-function Navbar() {
+function Navbar(props) {
   const [askQues, setaskQues] = useState(false);
   const [showHome, setShowHome] = useState(true);
   const [ansQues, setansQues] = useState(false);
   const [profile, setProfile] = useState(false);
 
+  const u = localStorage.getItem("loggedInUser");
   function askQuesDiv() {
     setaskQues(!askQues);
   }
@@ -32,17 +34,12 @@ function Navbar() {
           <span className={styles.brand}>LPU Community - Ask Anything</span>
         </div>
         <div className={styles.navRight}>
-          <button onClick={showHomeDiv}>Home</button>
-          <button onClick={askQuesDiv}>Ask Question</button>
-          <button onClick={ansQuesDiv}>Answer Question</button>
-          <button>Profile</button>
-          <button>Logout</button>
-          {askQues && <QuesPopup submit={askQuesDiv}></QuesPopup>}
+          <button>{u}</button>
+          <button onClick={props.hideNavbar}>Logout</button>
         </div>
       </nav>
-
-      {showHome && <QuestionDiv></QuestionDiv>}
-      {ansQues && <AnswerQuesDiv></AnswerQuesDiv>}
+      <Home></Home>
+      <div></div>
     </>
   );
 }
