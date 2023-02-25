@@ -3,10 +3,11 @@ import QuesPopup from "./QuesPopup";
 import Question from "./Question";
 import QuestionDiv from "./QuestionDiv";
 import AnswerQuesDiv from "./AnswerQuesDiv";
-import { useCallback, useState } from "react";
+import cn from "classnames";
+import { useState } from "react";
 
 export default function QNApage() {
-  const [showAllAns, setShowAllAns] = useState(true);
+  const [showAllAns, setShowAllAns] =  useState(true);
   const [showQuesPopup, setShowQuesPopup] = useState(false);
   const [showUnanswered, setShowUnanswered] = useState(false);
 
@@ -29,13 +30,34 @@ export default function QNApage() {
   return (
     <div>
       <div className={styles.qnaHead}>
-        <button onClick={showAllAnswer}>All Answers</button>
-        <button onClick={showPopup}>Ask Question</button>
-        <button onClick={showUnansweredQues}>Answer Question</button>
+        <button
+          className={cn(styles.qnaBtn, {
+            [styles.active]: showAllAns,
+          })}
+          onClick={showAllAnswer}
+        >
+          All Answers
+        </button>
+        <button
+          className={cn(styles.qnaBtn, {
+            [styles.active]: showQuesPopup,
+          })}
+          onClick={showPopup}
+        >
+          Ask Question
+        </button>
+        <button
+          className={cn(styles.qnaBtn, {
+            [styles.active]: showUnanswered,
+          })}
+          onClick={showUnansweredQues}
+        >
+          Answer Question
+        </button>
       </div>
       <div>
         {showAllAns && <QuestionDiv></QuestionDiv>}
-        {showQuesPopup && <QuesPopup></QuesPopup>}
+        {showQuesPopup && <QuesPopup className={styles.quesPopup}></QuesPopup>}
         {showUnanswered && <AnswerQuesDiv></AnswerQuesDiv>}
       </div>
     </div>

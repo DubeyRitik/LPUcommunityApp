@@ -1,0 +1,43 @@
+.qnaHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00203fff;
+  padding: 10px 20px;
+  color: white;
+}
+
+.qnaHead button {
+  background-color: #adefd1ff;
+  color: #00203fff;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.qnaHead button:hover {
+  background-color: white;
+  color: #adefd1ff;
+}
+
+.qnaHead button:last-child {
+  margin-right: 0;
+}
+
+.qnaHead button:focus {
+  outline: none;
+}
+
+.qnaHead button:active {
+  transform: scale(0.95);
+}
+
+.qnaHead button:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.qnaHead button:last-child {
+  border-radius: 0 10px 10px 0;
+}
