@@ -20,7 +20,7 @@ function QuestionDiv() {
 
   return (
     <div className={styles.homeParent}>
-      <div className={styles.categories}>Categories</div>
+      {/* <div className={styles.categories}>Categories</div> */}
 
       <div className={styles.quesDiv}>
         {questions.map((question) => (
@@ -28,6 +28,7 @@ function QuestionDiv() {
             question={question.ques}
             answer={question.answer}
             key={question.id}
+            user={question.user}
           />
         ))}
       </div>

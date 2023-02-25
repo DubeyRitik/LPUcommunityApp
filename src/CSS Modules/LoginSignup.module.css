@@ -1,0 +1,17 @@
+.main {
+  background-color: aqua;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.mainLeft {
+  background-color: aquamarine;
+}
+
+.mainRight {
+  background-color: beige;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10%;
+  margin: 10%;
+}
