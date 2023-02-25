@@ -1,21 +1,20 @@
-.cardset{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    column-gap: 14px;
-    margin-left: 3.8rem;
-    margin-top: 1rem;
+.cardset {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 14px;
+  margin-left: 3.8rem;
+  margin-top: 1rem;
 }
-.cards{
-    margin: 4px;
+.cards {
+  margin: 4px;
 }
 @media only screen and (min-width: 768px) {
-    iframe{
-      height: 13em;
-    }
-    .card{
-      width: 50%;
-    }
+  iframe {
+    height: 13em;
   }
-  .headline{
-    
+  .card {
+    width: 50%;
   }
+}
+.headline {
+}
