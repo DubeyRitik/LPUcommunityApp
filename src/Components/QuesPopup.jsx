@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import styles from "../CSS Modules/QuesPopup.module.css";
 import { db } from "../firebase.js";
@@ -6,6 +6,7 @@ import { db } from "../firebase.js";
 function QuesPopup(props) {
   const inputRef = useRef(null);
   const [showPopup, setShowPopup] = useState(true);
+
   async function addQues() {
     let ques = inputRef.current.value;
     await db.collection("questions").add({ question: ques, answered: false });
@@ -15,6 +16,19 @@ function QuesPopup(props) {
   function closePopup() {
     setShowPopup(false);
   }
+
+  // Close the popup when the user clicks outside of it
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (inputRef.current && !inputRef.current.contains(event.target)) {
+        setShowPopup(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return showPopup
     ? createPortal(

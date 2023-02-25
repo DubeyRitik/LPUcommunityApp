@@ -1,0 +1,8 @@
+.IndCard{
+    border:10px solid black;
+    width:10;
+}
+.Content{
+    width:inherit;
+    background-color: red;
+}
