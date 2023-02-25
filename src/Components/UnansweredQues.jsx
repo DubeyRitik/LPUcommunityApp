@@ -7,6 +7,7 @@ function UnansweredQues(props) {
   const user = localStorage.getItem("loggedInUser");
   let ques = props.question.question;
   let random = Math.floor(Math.random() * 1000);
+
   async function handleAnswer() {
     try {
       await db.collection("questions").add({
@@ -24,10 +25,16 @@ function UnansweredQues(props) {
   }
 
   return (
-    <div className={styles.parent}>
-      <h1>{ques}</h1>
-      <textarea value={answer} onChange={(e) => setAnswer(e.target.value)} />
-      <button onClick={handleAnswer}>Answer</button>
+    <div className={`${styles.parent} unanswered-ques`}>
+      <h1 className="question-heading">{ques}</h1>
+      <textarea
+        className="answer-textarea"
+        value={answer}
+        onChange={(e) => setAnswer(e.target.value)}
+      />
+      <button className="answer-button" onClick={handleAnswer}>
+        Answer
+      </button>
     </div>
   );
 }

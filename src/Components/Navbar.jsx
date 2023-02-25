@@ -13,6 +13,7 @@ function Navbar(props) {
   const [profile, setProfile] = useState(false);
 
   const u = localStorage.getItem("loggedInUser");
+
   function askQuesDiv() {
     setaskQues(!askQues);
   }
@@ -21,6 +22,7 @@ function Navbar(props) {
     setShowHome(true);
     setansQues(false);
   }
+
   function ansQuesDiv() {
     setansQues(true);
     setShowHome(false);
@@ -38,10 +40,12 @@ function Navbar(props) {
           <button onClick={props.hideNavbar}>Logout</button>
         </div>
       </nav>
-      <Home></Home>
+      <Home />
       <div></div>
     </>
   );
 }
 
 export default Navbar;
+
+

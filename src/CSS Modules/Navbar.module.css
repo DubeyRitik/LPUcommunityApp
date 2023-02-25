@@ -11,8 +11,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #3b5998;
   color: white;
+  background: linear-gradient(to right, #81899d, #4c8bf5);
   box-shadow: 0px 3px 5px #635656;
 }
 
@@ -23,16 +23,22 @@
 
 .navRight {
   display: flex;
+  align-items: center;
 }
 
 .navRight button {
   margin-left: 1rem;
-  color: #3b5998;
+  color: white;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-size: 1.1rem;
   cursor: pointer;
+  background-color: #00203fff;
+}
+
+.navRight button:hover {
+  background-color: #adefd1ff;
 }
 
 .brand {

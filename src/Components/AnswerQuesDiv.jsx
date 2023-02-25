@@ -18,8 +18,13 @@ function AnswerQuesDiv() {
 
   return (
     <div className={styles.answerDiv}>
-      {questions.map((question) => (
-        <UnansweredQues question={question} />
+      <h2 className={styles.title}>Unanswered Questions</h2>
+      {questions.map((question, index) => (
+        <UnansweredQues
+          key={question.id}
+          question={question}
+          index={index}
+        />
       ))}
     </div>
   );
