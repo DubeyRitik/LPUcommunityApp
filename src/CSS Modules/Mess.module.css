@@ -1,7 +1,6 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* align-items: center; */
 }
 
 .heading {
@@ -17,7 +16,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1rem;
-  /* justify-items: center; */
 }
 
 li {

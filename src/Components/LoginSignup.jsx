@@ -36,7 +36,6 @@ export default function LoginSignup(props) {
       .then((querySnapshot) => {
         if (querySnapshot.docs.length > 0) {
           const userData = querySnapshot.docs[0].data();
-          // alert("Login successful! Welcome " + userData.name);
           localStorage.setItem("loginStatus", "success");
           localStorage.setItem("loggedInUser", userData.name);
           props.showNavbarfunction();
