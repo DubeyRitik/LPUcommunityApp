@@ -7,7 +7,7 @@ import cn from "classnames";
 import { useState } from "react";
 
 export default function QNApage() {
-  const [showAllAns, setShowAllAns] =  useState(true);
+  const [showAllAns, setShowAllAns] = useState(true);
   const [showQuesPopup, setShowQuesPopup] = useState(false);
   const [showUnanswered, setShowUnanswered] = useState(false);
 
@@ -19,6 +19,11 @@ export default function QNApage() {
 
   function showPopup() {
     setShowQuesPopup(true);
+    console.log("ques poped up");
+  }
+
+  function closePopup() {
+    setShowQuesPopup(false);
   }
 
   function showUnansweredQues() {
@@ -57,7 +62,7 @@ export default function QNApage() {
       </div>
       <div>
         {showAllAns && <QuestionDiv></QuestionDiv>}
-        {showQuesPopup && <QuesPopup className={styles.quesPopup}></QuesPopup>}
+        {showQuesPopup && <QuesPopup className={styles.quesPopup} close = {closePopup} ></QuesPopup>}
         {showUnanswered && <AnswerQuesDiv></AnswerQuesDiv>}
       </div>
     </div>

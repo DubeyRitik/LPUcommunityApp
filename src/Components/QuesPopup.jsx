@@ -1,27 +1,30 @@
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import styles from "../CSS Modules/QuesPopup.module.css";
 import { db } from "../firebase.js";
 
 function QuesPopup(props) {
-  const inputRef = useRef(null);
-  const [showPopup, setShowPopup] = useState(true);
+  const [ques, setQues] = useState("");
 
   async function addQues() {
-    let ques = inputRef.current.value;
+    console.log("the ques added is: " + ques);
     await db.collection("questions").add({ question: ques, answered: false });
-    setShowPopup(false);
+    closePopup();
+  }
+
+  function handleInputChange(event) {
+    setQues(event.target.value);
   }
 
   function closePopup() {
-    setShowPopup(false);
+    props.close();
   }
 
   // Close the popup when the user clicks outside of it
   useEffect(() => {
     function handleClickOutside(event) {
-      if (inputRef.current && !inputRef.current.contains(event.target)) {
-        setShowPopup(false);
+      if (!event.target.closest(`.${styles.actualForm}`)) {
+        closePopup();
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -30,23 +33,21 @@ function QuesPopup(props) {
     };
   }, []);
 
-  return showPopup
-    ? createPortal(
-        <div className={styles.form}>
-          <div className={styles.wrapper}>
-            <div className={styles.actualForm}>
-              <button className={styles.closeButton} onClick={closePopup}>
-                X
-              </button>
-              <label>Enter your question: </label>
-              <input type="text" ref={inputRef} />
-              <button onClick={addQues}>Submit</button>
-            </div>
-          </div>
-        </div>,
-        document.body
-      )
-    : null;
+  return createPortal(
+    <div className={styles.form}>
+      <div className={styles.wrapper}>
+        <div className={styles.actualForm}>
+          <button className={styles.closeButton} onClick={closePopup}>
+            X
+          </button>
+          <label>Enter your question: </label>
+          <input type="text" value={ques} onChange={handleInputChange} />
+          <button onClick={addQues}>Submit</button>
+        </div>
+      </div>
+    </div>,
+    document.body
+  );
 }
 
 export default QuesPopup;
