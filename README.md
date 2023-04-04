@@ -1,4 +1,6 @@
 Please visit the deployment here : https://lpu-community-app.vercel.app/
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YyvwKee3DJU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <h2>Project Description</h2>
 <p>LPU Community is a website designed for the students of Lovely Professional University. It serves as a platform where students can interact with each other, access various resources and stay up-to-date with the college events and activities.</p>
 
