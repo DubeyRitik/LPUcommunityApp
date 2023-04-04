@@ -1,4 +1,5 @@
 Please visit the deployment here : https://lpu-community-app.vercel.app/
+<br>
 Here is the youtube video: https://www.youtube.com/watch?v=YyvwKee3DJU
 
 <h2>Project Description</h2>
